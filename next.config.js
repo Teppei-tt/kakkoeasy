@@ -2,7 +2,7 @@
 const nextConfig = {
     reactStrictMode: true,
     images: {
-        domains: ["placehold.jp"],
+        domains: ["images.microcms-assets.io", "placehold.jp"],
     },
 };
 

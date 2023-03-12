@@ -32,27 +32,38 @@ export default function Home({ blog }) {
                         </div>
                     </div>
 
-                    <div className="bg-white py-10 px-5 rounded-lg mt-10">
-                        <h2 className="text-center text-2xl font-bold">
+                    <div className=" py-10 px-10 rounded-lg mt-10">
+                        <h2 className="bg-white py-2 text-center text-2xl font-bold">
                             記事一覧
                         </h2>
-                        <ul className="mt-10 grid grid-cols-2 gap-3">
+                        <ul className="mt-10 grid grid-cols-2 gap-5">
                             {blog.map((blog) => (
-                                <div key={blog.id}>
-                                    {console.log()}
+                                <div key={blog.id} className="bg-white p-5">
+                                    {console.log(blog)}
                                     <li>
-                                        <Link href={`/blog/${blog.id}`}>
-                                            <Image
-                                                src={
-                                                    blog.eyecatch?.url
-                                                        ? blog.eyecatch?.url
-                                                        : "https://placehold.jp/300x250.png?dammy"
-                                                }
-                                                alt=""
-                                                width="300"
-                                                height="250"
-                                            />
-                                            {blog.title}
+                                        <Link
+                                            href={`/blog/${blog.id}`}
+                                            className="w-full"
+                                        >
+                                            <div className=" ">
+                                                <Image
+                                                    className="w-full aspect-video object-cover"
+                                                    src={
+                                                        blog.eyecatch?.url
+                                                            ? blog.eyecatch?.url
+                                                            : "https://placehold.jp/300x250.png?dammy"
+                                                    }
+                                                    alt=""
+                                                    width="300"
+                                                    height="200"
+                                                />
+                                            </div>
+                                            <p className="font-bold mt-2">
+                                                {/* {blog.category && blog.category} */}
+                                            </p>
+                                            <p className="font-bold mt-2">
+                                                {blog.title}
+                                            </p>
                                         </Link>
                                     </li>
                                 </div>
