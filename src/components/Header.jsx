@@ -15,7 +15,7 @@ export const Header = () => {
                     />
                 </Link> */}
                 <h1 className="h-full flex justify-between items-center px-4 text-2xl tracking-widest">
-                    KAKKOEASY
+                    <Link href="/">KAKKOEASY</Link>
                 </h1>
             </div>
 
