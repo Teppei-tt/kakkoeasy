@@ -2,7 +2,6 @@ import Link from "next/link";
 
 export const AuthorRecommend = (props) => {
     const { blog } = props;
-    console.log(blog);
 
     return (
         <>

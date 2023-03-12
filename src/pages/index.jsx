@@ -32,7 +32,6 @@ export default function Home({ blog }) {
                                     key={blog.id}
                                     className="bg-white rounded-lg shadow-xl"
                                 >
-                                    {console.log(blog?.category)}
                                     <li>
                                         <Link
                                             href={`/blog/${blog.id}`}
