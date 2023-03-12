@@ -5,6 +5,8 @@
  * この辺りがないので、Nest.jsのドキュメンとをみておく
  */
 
-export const HomeLayout = () => {
-    return <div className="max-w-2xl mx-auto"></div>;
-};
+// export const HomeLayout = () => {
+//     return (
+
+//     )
+// };

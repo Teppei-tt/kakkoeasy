@@ -17,8 +17,21 @@ export default function Home({ blog }) {
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main>
-                <div>連絡先情報を入れる予定</div>
+            <main className="">
+                <div className="max-w-3xl my-20 mx-auto bg-white p-10">
+                    <h1 className=" py-2 text-xl font-bold border-b-2 pb-2">
+                        サイトに関するご連絡に関して。
+                    </h1>
+                    <p className="mt-10">
+                        サイトに関してのご連絡は下記までお願い致します。
+                    </p>
+                    <p>原則5営業日までに返信いたします。</p>
+                    <p className="text-center mt-10">
+                        <a href="mailto:yossii20001021@gmail.com">
+                            yossii20001021@gmail.com
+                        </a>
+                    </p>
+                </div>
             </main>
         </>
     );

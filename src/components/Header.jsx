@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const Header = () => {
     return (
-        <header className="flex justify-between h-20 border-solid border-b-2 bg-white">
+        <header className="flex justify-between h-20 border-solid border-b-2 bg-white shadow-md">
             <div>
                 {/* <Link className=" w-10 h-10 block" href="/">
                     <Image
@@ -15,7 +15,7 @@ export const Header = () => {
                     />
                 </Link> */}
                 <h1 className="h-full flex justify-between items-center px-4 text-2xl tracking-widest">
-                    KAKKOEASAY
+                    KAKKOEASY
                 </h1>
             </div>
 
