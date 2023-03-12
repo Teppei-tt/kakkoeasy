@@ -5,7 +5,7 @@ export default function Document() {
     return (
         <Html lang="en">
             <Head />
-            <body>
+            <body className="tracking-wider bg-slate-100">
                 <Header />
                 <Main />
                 <NextScript />
