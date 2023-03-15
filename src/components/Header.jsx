@@ -1,50 +1,91 @@
 import Image from "next/image";
 import Link from "next/link";
+import React, { useState } from "react";
 
 export const Header = () => {
+    const [openMenu, setOpenMenu] = useState(false);
+
+    const handleMenuOpen = () => {
+        console.log(1313);
+        setOpenMenu(!openMenu);
+    };
+
     return (
         <header className="flex justify-between h-20 border-solid border-b-2 bg-white shadow-md">
             <div>
-                {/* <Link className=" w-10 h-10 block" href="/">
-                    <Image
-                        className="w-full h-auto"
-                        src="/tinjer-logo.jpg"
-                        width="200"
-                        height="200"
-                        alt="Picture of the author"
-                    />
-                </Link> */}
                 <h1 className="h-full flex justify-between items-center px-4 text-2xl tracking-widest">
                     <Link href="/">KAKKOEASY</Link>
                 </h1>
             </div>
 
-            <ul className="flex justify-between font-medium">
-                <li>
-                    <Link
-                        className="h-full flex justify-between items-center px-4"
-                        href="/"
-                    >
-                        TOP
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        className="h-full flex justify-between items-center px-4"
-                        href="/blog/"
-                    >
-                        BLOG
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        className="h-full flex justify-between items-center px-4"
-                        href="/contact/"
-                    >
-                        CONTACT
-                    </Link>
-                </li>
-            </ul>
+            <div className="flex items-center pr-5">
+                <ul className="md:flex justify-between font-medium h-full hidden ">
+                    <li>
+                        <Link
+                            className="h-full flex justify-between items-center px-4"
+                            href="/"
+                        >
+                            TOP
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            className="h-full flex justify-between items-center px-4"
+                            href="/blog/"
+                        >
+                            BLOG
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            className="h-full flex justify-between items-center px-4"
+                            href="/contact/"
+                        >
+                            CONTACT
+                        </Link>
+                    </li>
+                </ul>
+
+                <button
+                    onClick={handleMenuOpen}
+                    type="button"
+                    className="z-10 space-y-2 md:hidden block"
+                >
+                    <div
+                        className={
+                            openMenu
+                                ? "w-8 h-0.5 bg-gray-600 translate-y-2.5 rotate-45 transition duration-500 ease-in-out"
+                                : "w-8 h-0.5 bg-gray-600 transition duration-500 ease-in-out"
+                        }
+                    />
+                    <div
+                        className={
+                            openMenu
+                                ? "opacity-0 transition duration-500 ease-in-out"
+                                : "w-8 h-0.5 bg-gray-600 transition duration-500 ease-in-out"
+                        }
+                    />
+                    <div
+                        className={
+                            openMenu
+                                ? "w-8 h-0.5 bg-gray-600 -rotate-45 transition duration-500 ease-in-out"
+                                : "w-8 h-0.5 bg-gray-600 transition duration-500 ease-in-out"
+                        }
+                    />
+                </button>
+            </div>
+
+            <div
+                className={
+                    openMenu
+                        ? "text-left fixed bg-slate-50 right-0 top-0 w-8/12 h-screen flex flex-col justify-start pt-8 px-3 ease-linear duration-300"
+                        : "fixed right-[-100%] ease-linear duration-300"
+                }
+            >
+                <ul>
+                    <li>afafa</li>
+                </ul>
+            </div>
         </header>
     );
 };
