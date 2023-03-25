@@ -2,11 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 
+/**
+ * Header.jsxのjsがうごあなかったのは、クライアントサイドのjsとして認識されなかったから。
+ * _document.jsはサーバーサイド扱いになるのか？？
+ * https://zenn.dev/maztak/scraps/0f219179dc55cd
+ * next.jsの開発では、サーバーサイドで実行されるのjsなのか、クライアントサイドで呼ばれるjsなのかを意識して開発させる。
+ */
 export const Header = () => {
     const [openMenu, setOpenMenu] = useState(false);
 
     const handleMenuOpen = () => {
-        console.log(1313);
         setOpenMenu(!openMenu);
     };
 
@@ -49,7 +54,7 @@ export const Header = () => {
                 <button
                     onClick={handleMenuOpen}
                     type="button"
-                    className="z-10 space-y-2 md:hidden block"
+                    className="z-20 space-y-2 md:hidden block"
                 >
                     <div
                         className={
